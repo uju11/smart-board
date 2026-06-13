@@ -1,0 +1,19 @@
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# Database & Cache
+postgres_data/
+redis_data/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+db.sqlite3
+
+# OS generated files
+.DS_Store
+Thumbs.db

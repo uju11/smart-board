@@ -1,0 +1,29 @@
+<!-- Edit Group Modal -->
+<div class="modal fade" id="editGroupModal" tabindex="-1" aria-labelledby="editGroupModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-dark" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 16px;">
+            <div class="modal-header border-bottom-0">
+                <h5 class="modal-title fw-bold" id="editGroupModalLabel">Edit Group</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="edit-group-form">
+                <input type="hidden" id="edit-group-id">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="edit-group-name" class="form-label fw-semibold">Group Name</label>
+                        <input type="text" class="form-control" id="edit-group-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-group-members" class="form-label fw-semibold">Members</label>
+                        <select multiple class="form-select" id="edit-group-members" size="4"></select>
+                        <div class="form-text">Hold Ctrl/Cmd to select multiple members.</div>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0">
+                    <button type="button" class="btn btn-light rounded-pill" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary rounded-pill px-4">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<!-- Create Task Modal -->
+<div class="modal fade" id="createTaskModal" tabindex="-1" aria-labelledby="createTaskModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-dark" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 16px;">
+            <div class="modal-header border-bottom-0">
+                <h5 class="modal-title fw-bold" id="createTaskModalLabel">Create New Task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="create-task-form">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="create-task-title" class="form-label fw-semibold">Task Title</label>
+                        <input type="text" class="form-control" id="create-task-title" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="create-task-priority" class="form-label fw-semibold">Priority</label>
+                        <select class="form-select" id="create-task-priority" required></select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="create-task-assignee" class="form-label fw-semibold">Assignee</label>
+                        <select class="form-select" id="create-task-assignee" required></select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="create-task-time" class="form-label fw-semibold">Estimated Time (seconds)</label>
+                        <input type="number" class="form-control" id="create-task-time" required value="3600">
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0">
+                    <button type="button" class="btn btn-light rounded-pill" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-dark rounded-pill px-4">Create Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
