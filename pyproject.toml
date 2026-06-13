@@ -1,0 +1,30 @@
+[tool.black]
+line-length = 88
+# Ignore specific folders so Black doesn't format external/generated code
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | postgres_data
+  | redis_data
+  | migrations
+)/
+'''
+
+[tool.pylint.main]
+# Load the Django plugin
+load-plugins = "pylint_django"
+# Tell Pylint where your settings file is
+django-settings-module = "config.settings"
+ignore = ["migrations", ".venv", "venv"]
+
+[tool.pylint.messages_control]
+# Disable some extremely strict default rules that clash with Django/Ninja
+disable = [
+    "missing-docstring",
+    "too-few-public-methods",
+    "no-member",
+    "invalid-name",
+    "too-many-arguments"
+]
